@@ -78,6 +78,31 @@
 .postbody-container label {
     margin-right: 10px;
 }
+.postbody .footer{
+    display: grid;    
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.postbody .title-and-btns-container{
+    display: flex;
+    align-items: center;
+}
+.postbody .title-and-btns-container h5 {
+    align-self: center;
+    margin: 0;
+}
+.postbody .title-and-btns-container .img-container {
+    margin-left:auto;
+}
+.postbody .title-and-btns-container .img-container img {
+    height: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.postbody .title-and-btns-container .img-container img:hover {
+    transform: scale(1.1);
+    border-bottom: 1px solid black;
+}
 
 
 @media screen and (max-width:850px) {

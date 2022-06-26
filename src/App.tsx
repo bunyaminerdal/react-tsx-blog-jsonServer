@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import PostBar from "./components/PostBar";
 import PostBody from "./components/PostBody";
@@ -8,22 +8,19 @@ import './App.css'
 
 function App() {
   const dispatch = useDispatch<AppDispatch>()
-  const [isAdding, SetIsAdding] = useState(false)
   useEffect(() => {
     dispatch(getPosts())
   }, [dispatch])
 
-  const addPostClickHandler = () => {
-    SetIsAdding(!isAdding)
-  }
+
   return (
 
     <div className="App" >
       <div className="postbar">
-        <PostBar clickHandler={addPostClickHandler} />
+        <PostBar />
       </div>
       <div className="postbody" >
-        <PostBody isAdding={isAdding} />
+        <PostBody />
       </div>
     </div>
   );

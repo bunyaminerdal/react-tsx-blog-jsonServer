@@ -10,7 +10,7 @@ export const getPosts = () => async (dispatch: Dispatch<Action>) => {
         const { data } = await axios.get<post[]>("https://my-json-server.typicode.com/leonidas131/JsonServer/posts")
         dispatch({ type: ActionType.GET_POST_SUCCESS, payload: data })
         if (data !== []) {
-            dispatch({ type: ActionType.SELECT_POST_SUCCES, payload: data[0] })
+            dispatch({ type: ActionType.SELECT_POST_SUCCESS, payload: data[0] })
         }
     } catch (error: any) {
         dispatch({ type: ActionType.GET_POST_FAIL, payload: error.message })
@@ -20,8 +20,17 @@ export const selectPost = (postId: number) => async (dispatch: Dispatch<Action>)
     try {
         dispatch({ type: ActionType.SELECT_POST_REQUEST })
         const { data } = await axios.get<post>('https://my-json-server.typicode.com/leonidas131/JsonServer/posts/' + postId)
-        dispatch({ type: ActionType.SELECT_POST_SUCCES, payload: data })
+        dispatch({ type: ActionType.SELECT_POST_SUCCESS, payload: data })
     } catch (error: any) {
         dispatch({ type: ActionType.SELECT_POST_FAIL, payload: error.message })
+    }
+}
+export const addPost = (post: post) => async (dispatch: Dispatch<Action>) => {
+    try {
+        dispatch({ type: ActionType.ADD_POST_REQUEST })
+        const { data } = await axios.post<post>('https://my-json-server.typicode.com/leonidas131/JsonServer/posts', post)
+        dispatch({ type: ActionType.ADD_POST_SUCCESS, payload: data })
+    } catch (error: any) {
+        dispatch({ type: ActionType.ADD_POST_FAIL, payload: error.message })
     }
 }
