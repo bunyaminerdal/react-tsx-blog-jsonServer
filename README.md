@@ -4,5 +4,5 @@
 ### react typescript
 ### redux
 ### bootstrap & CSS3
-### JASON placeholder (jsonServer)https://jsonplaceholder.typicode.com/
+### JSON placeholder [jsonServer](https://jsonplaceholder.typicode.com/)
 
