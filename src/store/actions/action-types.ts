@@ -1,0 +1,13 @@
+enum ActionType {
+    GET_POST_REQUEST,
+    GET_POST_SUCCESS,
+    GET_POST_FAIL,
+    SELECT_POST_REQUEST,
+    SELECT_POST_SUCCES,
+    SELECT_POST_FAIL,
+    ADD_BTN,
+    ADD_POST_REQUEST,
+    ADD_POST_SUCCESS,
+    ADD_POST_FAIL
+}
+export default ActionType 

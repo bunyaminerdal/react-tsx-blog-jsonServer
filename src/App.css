@@ -1,0 +1,89 @@
+.App {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    
+}
+
+.postbar {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 300px;
+    justify-content: flex-start;
+    padding: 10px
+}
+ .addbtn{
+    width: 100%;
+    background-color: #ddd;
+    color: #000;
+    border: 1px solid #ddd; 
+    font-weight: 500;
+    font-size: large;
+    box-sizing: border-box;
+    transition: 300ms border;
+}
+
+ .addbtn:hover {
+    border: 1px solid #000;    
+}
+
+.postbar .listbtn {
+    cursor: pointer;
+    border-left: 0px solid #eee;
+    font-weight: normal;
+    transition: 300ms border-left;
+
+}
+.postbar .listbtn:hover {
+    border-left: 5px solid #eee;
+    font-weight: 700;
+}
+.postbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    min-width: 500px;
+    padding: 10px;
+}
+.posttitle-container{
+    display: flex;
+    flex:1;
+    align-items: center;
+    width: 100%;    
+}
+.posttitle-container input {
+        display: flex;
+        flex: 1;
+        align-items: flex-start;
+        margin-left: auto;
+}
+.posttitle-container label {
+    margin-right: 10px;
+}
+.postbody-container {
+    display: flex;
+    flex:1;
+    align-items: flex-start;
+    width: 100%;
+}
+.postbody-container  textarea{
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    margin-left: auto;
+    min-height: 300px;
+}
+.postbody-container label {
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width:850px) {
+    .App{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+}
